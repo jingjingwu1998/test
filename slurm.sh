@@ -16,7 +16,7 @@ conda activate py3.7
 
 # Define variables
 OUTPUT_DIR="/share/lab_teng/trainee/JingjingWu/EBV/spaindata/"
-CREDENTIALS_FILE="/path/to/credentials.json"
+CREDENTIALS_FILE="/home/80030577/ega-download-client/pyega3/config/default_credential_file.json"
 
 # Loop through the file IDs from 921 to 975
 for FILE_ID in $(seq -f "EGAF00004726%02g" 921 975); do

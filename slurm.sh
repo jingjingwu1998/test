@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=01_hicpro_digest       # Job name
+#SBATCH --job-name=download_pyega3       # Job name
 #SBATCH --output=01_hicpro_digest_%j.log # Standard output and error log (%j for job ID)
 #SBATCH --time=12:00:00                  # Walltime limit
 #SBATCH --nodes=1                        # Number of nodes

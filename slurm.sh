@@ -8,3 +8,5 @@
 #SBATCH --mem=32G                        # Memory required per node
 #SBATCH --mail-type=BEGIN,END,FAIL       # Email notifications for job events
 #SBATCH --mail-user=Jingjing.Wu@moffitt.org  # Email address for notifications
+
+pyega3 -c 1 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF00004726920 --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata

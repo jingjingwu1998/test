@@ -13,7 +13,7 @@
 # Activate the conda environment
 conda activate py3.7
 # pyega3 -c 1 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF00004726920 --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata
-
+# pyega3 -c 5 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF00004726921 --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata
 # Define variables
 OUTPUT_DIR="/share/lab_teng/trainee/JingjingWu/EBV/spaindata/"
 CREDENTIALS_FILE="/home/80030577/ega-download-client/pyega3/config/default_credential_file.json"

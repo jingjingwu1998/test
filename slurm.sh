@@ -15,4 +15,4 @@ conda activate py3.7
 # pyega3 -c 1 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF00004726920 --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata
 # pyega3 -c 5 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF00004726921 --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata
 
-for id in $(seq 26922 26975); do pyega3 -c 5 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF000047$id --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata; done
+for id in $(seq 26924 26975); do pyega3 -c 5 -cf /home/80030577/ega-download-client/pyega3/config/default_credential_file.json fetch EGAF000047$id --output-dir /share/lab_teng/trainee/JingjingWu/EBV/spaindata; done

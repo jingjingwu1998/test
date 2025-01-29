@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=download_pyega3       # Job name
+#SBATCH --job-name=Bowtie2_alignment_test       # Job name
 #SBATCH --output=%x_%j.log  # %x uses the job name dynamically
 #SBATCH --time=12:00:00                  # Walltime limit
 #SBATCH --nodes=1                        # Number of nodes
@@ -8,6 +8,12 @@
 #SBATCH --mem=32G                        # Memory required per node
 #SBATCH --mail-type=BEGIN,END,FAIL       # Email notifications for job events
 #SBATCH --mail-user=Jingjing.Wu@moffitt.org  # Email address for notifications
+
+#bowtie2-build /share/lab_teng/trainee/JingjingWu/EBV/HiC_performance/GRCh37.primary_assembly.genome.fa /share/lab_teng/trainee/JingjingWu/EBV/HiC_performance/bowtie2-build_index/GRCh37
+
+bowtie2 -x /share/lab_teng/trainee/JingjingWu/EBV/HiC_performance/bowtie2-build_index/GRCh37 \
+-U /share/lab_teng/trainee/JingjingWu/EBV/hicpro_mapping_2/hicpro_mapping_2/rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1.fq.gz \
+-S test_GRCh37.sam
 
 
 # Activate the conda environment

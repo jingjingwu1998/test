@@ -1,0 +1,11 @@
+# 1️⃣ Step 1: Sort the BAM File (Coordinate Sorting)
+samtools sort -o rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.sorted.bam rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.bam
+
+# 2️⃣ Step 2: Fix BAM Header (If Needed)
+samtools view -H rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.sorted.bam > header.sam
+
+samtools reheader header.sam rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.sorted.bam > rawdata/Day0/fixed.bam
+
+# 3️⃣ Step 3: Remove Unmapped Reads (If Indexing Still Fails)
+samtools view -b -F 4 rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.fixed.bam rawdata/Day0/fixed_filtered.bam
+mv rawdata/Day0/fixed_filtered.bam rawdata/Day0/Day0_CKDL220009103-1a_HN2CMDSX3_L3_1_GRCh37.bwt2merged.sorted.fixed_filtered.bam
